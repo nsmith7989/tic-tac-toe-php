@@ -1,0 +1,10 @@
+{
+    "name": "nathanaelsmith/php-tic-tac-toe",
+    "authors": [
+        {
+            "name": "Nsmith",
+            "email": "foo@bar.com"
+        }
+    ],
+    "require": {}
+}
