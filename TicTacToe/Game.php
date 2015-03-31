@@ -65,7 +65,7 @@ class Game
             '8' => [1, 2],
             '9' => [2, 2]
         ];
-        return $mapping[$human_move];
+        return array_key_exists($human_move, $mapping) ? $mapping[$human_move] : [false, false];
     }
 
     /**
@@ -76,6 +76,10 @@ class Game
         while (true) {
             echo $this->solicitMove();
             list($x, $y) = $this->getMove();
+            if (!$x || !$y) {
+                echo "Invalid move! \n";
+                continue;
+            }
             if ($this->board->getCell($x, $y)->getValue()) {
                 echo "Invalid Move! \n";
             } else {
