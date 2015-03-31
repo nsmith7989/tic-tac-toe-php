@@ -6,6 +6,10 @@ class Cell
 {
 
 
+    /**
+     * The value {'X'|'0'|''} of the cell
+     * @var string
+     */
     private $value;
 
     /**
